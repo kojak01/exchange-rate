@@ -52,6 +52,14 @@
             const tableNum = data.no;
             const rateArr = data.rates;
 
+            const dataTableDiv =  document.getElementById('data-table');
+            document.getElementById('date').innerHTML = tableNum;
+            //forEach performs a function on each element
+            rateArr.forEach(function(el) {
+                const code = el.code; // USD
+                const currency = el.currency;
+                const price = el.price;
+            })
         }
     </script>
 </body>
