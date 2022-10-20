@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exchange</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            background: #363d57;
+        }
+        .container  {
+            width: 400px;
+            background: white;
+            border-radius: 10px;
+        }
+        .container h3 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h3>Table NBP no: <span id="date"></span></h3>
+        <div id="data-table"></div>
+    </div>
     <script>
         startApp(); // Promise <pending> 
         async function startApp() {
