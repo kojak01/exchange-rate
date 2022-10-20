@@ -56,10 +56,24 @@
             document.getElementById('date').innerHTML = tableNum;
             //forEach performs a function on each element
             rateArr.forEach(function(el) {
+                console.log(el);
                 const code = el.code; // USD
                 const currency = el.currency;
-                const price = el.price;
-            })
+                const price = el.mid;
+                addRateContent(code, currency, price, dataTableDiv);
+            });
+        }
+
+        function addRateContent(code, currency, price, dataTableDiv){
+            const el = document.createElement('div');
+            el.classList.add('rate');
+            el.innerHTML = `
+                <div>${code}</div>
+                <div>${currency}</div>
+                <div>${price} zł </div>
+            `;
+
+            dataTableDiv.append(el);// method append;
         }
     </script>
 </body>
