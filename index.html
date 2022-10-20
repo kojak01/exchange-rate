@@ -8,11 +8,12 @@
 </head>
 <body>
     <script>
-        startApp();
-        function startApp() {
+        startApp(); // Promise <pending> 
+        async function startApp() {
             const apiUrl = 'http://api.nbp.pl/api/exchangerates/tables/a?format=json'; 
-            const response = fetch(apiUrl);  //download data from the server fetch
-            console.log(response);
+            const response = await fetch(apiUrl);  //download data from the server(example apiUrl)// fetch asynchronous // await = async function
+            const data = await response.json(); // .json transforms into an object JS which we can watch example : code currency mid
+            console.log(data);
         }
     </script>
 </body>
